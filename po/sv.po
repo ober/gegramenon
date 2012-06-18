@@ -1,0 +1,1453 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: etherape 0.9.0-9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-06-05 11:15+0200\n"
+"PO-Revision-Date: 2005-12-12 22:23+0100\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.c:93
+msgid "don't display any node text identification"
+msgstr "visa inte någon textidentifiering för noder"
+
+#: src/main.c:95
+msgid "replay packets from file"
+msgstr ""
+
+#: src/main.c:95
+msgid "<file to replay>"
+msgstr ""
+
+#: src/main.c:97
+msgid "set capture filter"
+msgstr "sätt fångstfilter"
+
+#: src/main.c:97
+msgid "<capture filter>"
+msgstr "<fångstfilter>"
+
+#: src/main.c:99
+msgid "set interface to listen to"
+msgstr "ställ in gränssnitt att lyssna på "
+
+#: src/main.c:99
+msgid "<interface name>"
+msgstr "<namn på nätverksgränssnitt>"
+
+#: src/main.c:101
+msgid "export to named file at end of replay"
+msgstr ""
+
+#: src/main.c:101 src/main.c:103
+msgid "<file to export to>"
+msgstr ""
+
+#: src/main.c:103
+msgid "export to named file on receiving USR1"
+msgstr ""
+
+#: src/main.c:105
+#, fuzzy
+msgid "don't move nodes around (deprecated)"
+msgstr "flytta inte runt noder"
+
+#: src/main.c:107
+msgid "limits nodes displayed"
+msgstr "begränsar att visade noder"
+
+#: src/main.c:107
+msgid "<number of nodes>"
+msgstr "<antal noder>"
+
+#: src/main.c:109
+msgid "mode of operation"
+msgstr "operationsläge"
+
+#: src/main.c:109
+msgid "<link|ip|tcp>"
+msgstr ""
+
+#: src/main.c:111
+msgid "don't convert addresses to names"
+msgstr "konvertera inte addresser till namn"
+
+#: src/main.c:113
+msgid "Disable informational messages"
+msgstr ""
+
+#: src/main.c:115
+msgid "minimum packet delay in ms for reading capture files [cli only]"
+msgstr ""
+
+#: src/main.c:116 src/main.c:119
+msgid "<delay>"
+msgstr ""
+
+#: src/main.c:118
+msgid "maximum packet delay in ms for reading capture files [cli only]"
+msgstr ""
+
+#: src/main.c:121
+msgid "uses the named libglade file for widgets"
+msgstr ""
+
+#: src/main.c:121
+#, fuzzy
+msgid "<glade file>"
+msgstr "<fångstfilter>"
+
+#: src/main.c:140 src/menus.c:346
+msgid "-unknown-"
+msgstr ""
+
+#: src/main.c:208
+msgid "Unrecognized mode. Do etherape --help for a list of modes"
+msgstr "Okänt läge. Kör etherape --help för en lista av lägen"
+
+#: src/capture.c:110
+#, c-format
+msgid ""
+"No capture device found or insufficient privileges.\n"
+"Only file replay will be available.\n"
+"EtherApe must be run with administrative privileges (e.g. root) to enable "
+"live capture.\n"
+"Pcap error: %s"
+msgstr ""
+
+#: src/capture.c:133
+#, fuzzy, c-format
+msgid ""
+"Error opening %s : %s\n"
+"- perhaps you need to be root?"
+msgstr "Fel vid öppning av %s : %s - kanske behöver du vara root?"
+
+#: src/capture.c:138
+#, c-format
+msgid "Live device %s opened for capture. pcap_fd: %d"
+msgstr "Realtidsenhet %s öppnad för fångst. pcap_fd: %d"
+
+#: src/capture.c:146
+#, c-format
+msgid "Can't open both %s and device %s. Please choose one."
+msgstr "Kan inte öppna både %s och enheten %s. Vänligen välj en."
+
+#: src/capture.c:154
+#, c-format
+msgid "Error opening %s : %s"
+msgstr "Fel vid öppning av %s : %s"
+
+#: src/capture.c:157
+#, c-format
+msgid "%s opened for offline capture"
+msgstr "%s öppnad för offline-fångst"
+
+#: src/capture.c:167
+#, c-format
+msgid "File %s contains packets with unsupported link type %d, cannot replay"
+msgstr ""
+
+#: src/capture.c:175
+#, c-format
+msgid ""
+"Device %s uses unsupported link type %d,cannot capture. Please choose "
+"another interface."
+msgstr ""
+
+#: src/capture.c:182
+#, c-format
+msgid "Unsupported link type %d"
+msgstr ""
+
+#: src/capture.c:196
+#, c-format
+msgid ""
+"This device does not support link-layer mode. Please use IP or TCP modes."
+msgstr ""
+
+#: src/capture.c:224
+#, c-format
+msgid ""
+"Couldn't obtain netmask info (%s). Filters involving broadcast addresses "
+"could behave incorrectly."
+msgstr ""
+
+#: src/capture.c:230
+#, fuzzy, c-format
+msgid "Unable to parse filter string (%s). Filter ignored."
+msgstr "Kunde inte tolka filtersträng (%s)."
+
+#: src/capture.c:233
+#, fuzzy, c-format
+msgid "Can't install filter (%s). Filter ignored."
+msgstr "Kan inte installera filter (%s)."
+
+#: src/capture.c:283
+msgid "Starting live capture"
+msgstr "Startar realtidsfångst"
+
+#: src/capture.c:291
+#, fuzzy
+msgid "Using timers for live capture"
+msgstr "Pausar realtidsfångst"
+
+#: src/capture.c:302
+msgid "Starting offline capture"
+msgstr "Startar offline-fångst"
+
+#: src/capture.c:327
+msgid "Pausing offline capture"
+msgstr "Pause offline-fångst"
+
+#: src/capture.c:330
+msgid "Error while trying to pause capture"
+msgstr "Fel vid försök att pause fångst"
+
+#: src/capture.c:350
+msgid "Stopping live capture"
+msgstr "Stoppar realtidsfångst"
+
+#: src/capture.c:355
+msgid "Stopping offline capture"
+msgstr "Stoppar offline-fångst"
+
+#: src/capture.c:377
+msgid "Capture device stopped or file closed"
+msgstr "Fångstenhet stoppad eller fil stängd"
+
+#: src/menus.c:51
+#, c-format
+msgid "get_interface result: '%s'"
+msgstr ""
+
+#: src/menus.c:54
+msgid "No suitables interfaces for capture have been found"
+msgstr "Inga lämpliga nätverksgränssnitt för fångst har hittats"
+
+#: src/menus.c:64
+msgid "Available interfaces for capture:"
+msgstr "Tillgängliga nätverksgränssnitt för fångst:"
+
+#: src/menus.c:195
+#, c-format
+msgid "Capture interface set to %s in GUI"
+msgstr "Fångstgränssnitt inställd till %s i grafiska gränsnittet"
+
+#: src/menus.c:251
+#, c-format
+msgid "Mode set to %s in GUI"
+msgstr "Läge satt till %s i grafiska gränsnittet"
+
+#: src/menus.c:390
+#, fuzzy
+msgid "Status already PLAY at gui_start_capture"
+msgstr "Status är inte PLAY vid gui_pause_capture"
+
+#: src/menus.c:437 src/menus.c:467
+#, c-format
+msgid "Invalid mode: %d"
+msgstr ""
+
+#: src/menus.c:446
+msgid "Reading data from "
+msgstr "Läser data från "
+
+#: src/menus.c:453 src/menus.c:608
+msgid "default interface"
+msgstr "förvalt nätverksgränssnitt"
+
+#: src/menus.c:458
+#, fuzzy
+msgid " in Data Link mode"
+msgstr " i UDP-läge"
+
+#: src/menus.c:461
+msgid " in IP mode"
+msgstr " i IP-läge"
+
+#: src/menus.c:464
+msgid " in TCP mode"
+msgstr " i TCP-läge"
+
+#: src/menus.c:476
+msgid "Diagram started"
+msgstr "Diagram startad"
+
+#: src/menus.c:510
+msgid "Paused"
+msgstr "Pausad"
+
+#: src/menus.c:512
+msgid "Diagram paused"
+msgstr "Diagram pausad"
+
+#: src/menus.c:544
+#, c-format
+msgid "Replay from file '%s' completed."
+msgstr ""
+
+#: src/menus.c:601
+msgid "Ready to capture from "
+msgstr "Klar att fånga in från "
+
+#: src/menus.c:613
+msgid "Diagram stopped"
+msgstr "Diagram stoppad"
+
+#: src/diagram.c:162
+#, c-format
+msgid ""
+"Nodes: %d (on canvas:%d, shown: %u), Links: %d, Conversations: %ld, names %"
+"ld, protocols %ld. Total Packets seen: %lu (in memory: %ld, on list %ld). IP "
+"cache entries %ld. Canvas objs: %ld. Refreshed: %u ms"
+msgstr ""
+
+#: src/diagram.c:379
+#, c-format
+msgid "SIGUSR1 received: exporting to %s"
+msgstr ""
+
+#: src/diagram.c:544
+#, c-format
+msgid "Unable to allocate color for new protocol %s"
+msgstr "Kunde inte allokera färg för nytt protokoll %s"
+
+#: src/diagram.c:639
+msgid "Canvas node null"
+msgstr ""
+
+#: src/diagram.c:654
+#, c-format
+msgid "Creating canvas_node: %s. Number of nodes %d"
+msgstr "Skapar canvas_node: %s. Antal noder %d"
+
+#: src/diagram.c:719
+msgid "Unknown value or node_size_variable"
+msgstr "Okänt värde eller node_size_variable"
+
+#: src/diagram.c:1247
+#, fuzzy
+msgid "Unknown value for link_size_variable"
+msgstr "Okänt värde eller node_size_variable"
+
+#: src/diagram.c:1286
+#, c-format
+msgid "Link main protocol: %s"
+msgstr "Huvudprotokoll för länk: %s"
+
+#: src/diagram.c:1289
+msgid "Link main protocol unknown"
+msgstr "Huvudprotokoll för länk okänt"
+
+#: src/info_windows.c:115 src/info_windows.c:781
+#, c-format
+msgid "We could not load the interface! (%s)"
+msgstr "Vi kunde inte läsa in gränssnittet! (%s)"
+
+#: src/info_windows.c:165
+msgid "No prot_name in on_prot_info_delete_event"
+msgstr "Inget prot_name i on_prot_info_delete_event"
+
+#: src/info_windows.c:172
+msgid "No prot_info_window in on_prot_info_delete_event"
+msgstr "Inget prot_info_window i on_prot_info_delete_event"
+
+#: src/info_windows.c:918 src/info_windows.c:1008 src/info_windows.c:1009
+#: src/info_windows.c:1020 src/info_windows.c:1021
+#, fuzzy
+msgid "Node timed out"
+msgstr "Nod-timeout (ms)"
+
+#: src/info_windows.c:982
+msgid "B->A"
+msgstr ""
+
+#: src/info_windows.c:983
+msgid "A->B"
+msgstr ""
+
+#: src/info_windows.c:990
+#, fuzzy
+msgid "Link timed out"
+msgstr "Länk-timeout (ms)"
+
+#: src/datastructs.c:401
+#, c-format
+msgid "Failed to open %s. No TCP or UDP services will be recognized"
+msgstr ""
+"Misslyckades att öppna %s. Inga TCP eller UDP-tjänster kommer att kännas igen"
+
+#: src/datastructs.c:407
+#, c-format
+msgid "Reading TCP and UDP services from %s"
+msgstr "Läser TCP och UDP-tjänster från %s"
+
+#: src/datastructs.c:459
+#, c-format
+msgid "Unable to  parse line %s"
+msgstr "Kunde inte tolka rad %s"
+
+#: src/datastructs.c:467
+#, c-format
+msgid "DDP protocols not supported in %s"
+msgstr "DDP-protokoll stöds inte i %s"
+
+#: src/datastructs.c:469
+#, fuzzy, c-format
+msgid "SCTP protocols not supported in %s"
+msgstr "DDP-protokoll stöds inte i %s"
+
+#: src/decode_proto.c:197
+#, fuzzy, c-format
+msgid "Link type is %s"
+msgstr "Länktyp är RAW"
+
+#: src/decode_proto.c:271
+msgid "Data link entry not initialized"
+msgstr ""
+
+#: src/decode_proto.c:579
+msgid "Radiotap:captured size too small, packet discarded"
+msgstr ""
+
+#: src/decode_proto.c:608
+msgid "PPI:captured size too small, packet discarded"
+msgstr ""
+
+#: src/decode_proto.c:639
+#, c-format
+msgid "PPI:unsupported link type %u, packet discarded"
+msgstr ""
+
+#: src/decode_proto.c:692 src/decode_proto.c:746 src/decode_proto.c:759
+msgid "wlan:captured size too small, packet discarded"
+msgstr ""
+
+#: src/decode_proto.c:715
+#, c-format
+msgid "Invalid tofromds field in WLAN packet: 0x%x"
+msgstr ""
+
+#: src/decode_proto.c:797
+#, c-format
+msgid "wlan:unknown frame type 0x%x, decode aborted"
+msgstr ""
+
+#: src/links.c:212
+msgid "Queuing link for remove"
+msgstr ""
+
+#: src/links.c:263
+#, fuzzy, c-format
+msgid "New link: %s. Number of links %d"
+msgstr "Skapar länk: %s-%s. Antal länkar %d"
+
+#: src/links.c:345
+#, c-format
+msgid "Updated links. Active links %d"
+msgstr ""
+
+#: src/names.c:108
+#, c-format
+msgid ""
+"not enough captured data, terminating protocol decode for '%s' (level %d)"
+msgstr ""
+
+#: src/names.c:112
+#, c-format
+msgid "not enough captured data, terminating protocol decode at level %d"
+msgstr ""
+
+#: src/names.c:219
+#, fuzzy
+msgid "Unsupported ape mode in fill_node_id"
+msgstr "Ej stöd för ape-läge i get_link_id"
+
+#: src/node.c:111
+#, fuzzy, c-format
+msgid "New node: %s. Number of nodes %d"
+msgstr "Skapar nod: %s. Antal noder %d"
+
+#: src/node.c:145
+#, fuzzy, c-format
+msgid "delete node: %s. Number of nodes %d"
+msgstr "Skapar nod: %s. Antal noder %d"
+
+#: src/node.c:266
+#, c-format
+msgid "Queuing node '%s' for remove"
+msgstr ""
+
+#: src/node.c:585
+#, c-format
+msgid "Updated nodes. Active nodes %d"
+msgstr ""
+
+#: src/preferences.c:300
+#, fuzzy, c-format
+msgid "Preferences saved to %s"
+msgstr "Egenskaper sparade"
+
+#: src/preferences.c:307
+#, c-format
+msgid "Error saving preferences to '%s': %s"
+msgstr ""
+
+#: src/ui_utils.c:47
+#, fuzzy, c-format
+msgid "%ld\" ago"
+msgstr "%d\" sedan"
+
+#: src/ui_utils.c:53
+#, fuzzy, c-format
+msgid "%ld'%ld\" ago"
+msgstr "%d'%d\" sedan"
+
+#: src/ui_utils.c:69
+#, c-format
+msgid "%d/%d %d:%d"
+msgstr "%d/%d %d:%d"
+
+#: glade/etherape.glade:10
+msgid "Information"
+msgstr "Information"
+
+#: glade/etherape.glade:49
+msgid "EtherApe: Preferences"
+msgstr "EtherApe: Egenskaper"
+
+#: glade/etherape.glade:76
+#, fuzzy
+msgid "Protocol Stack _Level"
+msgstr "Stacknivå för protokoll"
+
+#: glade/etherape.glade:89
+msgid "Set what level of the protocol stack is displayed in the legend"
+msgstr "Ställ in vilken nivå i protokollstacken som visas i förklaringen"
+
+#: glade/etherape.glade:90
+msgid ""
+"Topmost recognized protocol\n"
+"Level 2 (Eg: ETH_II)\n"
+"Level 3 (Eg: IP)\n"
+"Level 4 (Eg: TCP)\n"
+"Level 5 (Eg: HTTP)"
+msgstr ""
+
+#: glade/etherape.glade:113
+msgid "The statistic used to compute node and link sizes"
+msgstr ""
+
+#: glade/etherape.glade:115
+#, fuzzy
+msgid "Size _Variable"
+msgstr "Variabel för nodstorlek"
+
+#: glade/etherape.glade:128
+msgid ""
+"Set the kind of instantenous or accumulated traffic that the node radius "
+"indicates"
+msgstr ""
+"Ställ in typ av nuvarande eller ackumulerad trafik som nodradiusen indikerar"
+
+#: glade/etherape.glade:129
+msgid ""
+"Instant. traffic (In+Out)\n"
+"Instant. traffic (Inbound)\n"
+"Instant. traffic (Outbound)\n"
+"Instant. packets (In+Out)\n"
+"Accum. traffic (In+Out)\n"
+"Accum. traffic (Inbound)\n"
+"Accum. traffic (Outbound)\n"
+"Accum. packets (In+Out)\n"
+"Average pkt size (In+Out)\n"
+msgstr ""
+
+#: glade/etherape.glade:160
+msgid "Link _Width - Node Radius Ratio"
+msgstr ""
+
+#: glade/etherape.glade:174
+msgid "Ratio between link width and node radius"
+msgstr ""
+
+#: glade/etherape.glade:200
+msgid "Node _Radius Multiplier"
+msgstr ""
+
+#: glade/etherape.glade:241
+#, fuzzy
+msgid "Size _Mode"
+msgstr "Storleksläge"
+
+#: glade/etherape.glade:254
+msgid ""
+"Choose how node radius and link width are calculated as a function of "
+"average traffic"
+msgstr ""
+"Välj hur nodradien och länkbredd räknas fram som en funktion av medeltrafiken"
+
+#: glade/etherape.glade:255
+msgid ""
+"Linear\n"
+"Logarithmic\n"
+"Square Root"
+msgstr ""
+
+#: glade/etherape.glade:277
+#, fuzzy
+msgid "_Hide node names"
+msgstr "Göm nodnamn"
+
+#: glade/etherape.glade:281
+msgid "Toggle whether the node names are displayed on top of the nodes"
+msgstr "Växla visning av nodnamnen på toppen av noderna"
+
+#: glade/etherape.glade:294
+#, fuzzy
+msgid "_Group unknown ports"
+msgstr "Gruppera okända portar"
+
+#: glade/etherape.glade:324
+#, fuzzy
+msgid "_Name Resolution"
+msgstr "DNS-uppslagning"
+
+#: glade/etherape.glade:328
+msgid ""
+"Enable name resolution. If unchecked, all addresses are in numeric form."
+msgstr ""
+
+#: glade/etherape.glade:359
+#, fuzzy
+msgid "_Capture filter"
+msgstr "Fångstfilter"
+
+#: glade/etherape.glade:371
+#, fuzzy
+msgid "Sets the capture filter"
+msgstr "sätt fångstfilter"
+
+#: glade/etherape.glade:395
+msgid "Node Label _Font"
+msgstr ""
+
+#: glade/etherape.glade:409
+msgid "Node Label Font"
+msgstr ""
+
+#: glade/etherape.glade:437
+msgid "Node Label C_olor"
+msgstr ""
+
+#: glade/etherape.glade:450
+#, fuzzy
+msgid "Choose the color used to display node labels"
+msgstr "Välj typsnitt som används för att visa text i diagram"
+
+#: glade/etherape.glade:451
+msgid "Pick a Color "
+msgstr ""
+
+#: glade/etherape.glade:473 glade/etherape.glade:714 glade/etherape.glade:859
+msgid "Diagram"
+msgstr "Diagram"
+
+#: glade/etherape.glade:513
+msgid "Add color"
+msgstr "Lägg till färg"
+
+#: glade/etherape.glade:517
+msgid ""
+"Add a new color to the list of colors that can be used to represent protocols"
+msgstr ""
+"Lägg till ny färg till listan av färger som kan användas för att "
+"representera protokoll"
+
+#: glade/etherape.glade:528
+msgid "Remove color"
+msgstr "Ta bort färg"
+
+#: glade/etherape.glade:542
+#, fuzzy
+msgid "Change color"
+msgstr "Tona färger"
+
+#: glade/etherape.glade:546
+#, fuzzy
+msgid "Changes selected row color"
+msgstr "Ta bort valt protokoll"
+
+#: glade/etherape.glade:556
+msgid "Edit protocol"
+msgstr "Redigera protokoll"
+
+#: glade/etherape.glade:590
+msgid "Colors"
+msgstr "Färger"
+
+#: glade/etherape.glade:619
+#, fuzzy
+msgid "Diagram Refresh _Period (ms)"
+msgstr "Uppdateringsperiod för diagram (ms)"
+
+#: glade/etherape.glade:632
+msgid "Refresh diagram every this many miliseconds"
+msgstr "Uppdatera diagram enligt detta val (millisekunder)"
+
+#: glade/etherape.glade:656
+msgid "Averaging Time (ms)"
+msgstr "Genomsnittlig tid (ms)"
+
+#: glade/etherape.glade:668
+msgid "Packet information is averaged for this amount of time"
+msgstr "Paketinformation är genomsnittlig för denna tid"
+
+#: glade/etherape.glade:727
+msgid ""
+"Remove this node from the diagram after this much time. 0 means never "
+"timeout."
+msgstr ""
+"Ta bort denna nod från diagrammet efter så här lång tid. 0 betyder aldrig."
+
+#: glade/etherape.glade:751 glade/etherape.glade:896
+msgid "Traffic Statistics"
+msgstr ""
+
+#: glade/etherape.glade:763
+msgid ""
+"Delete this node from memory after this much time. 0 means never timeout."
+msgstr "Ta bort denna nod från minnet efter så här lång tid. 0 betyder aldrig."
+
+#: glade/etherape.glade:787 glade/etherape.glade:932
+#, fuzzy
+msgid "Protocol Statistics"
+msgstr "Stacknivå för protokoll"
+
+#: glade/etherape.glade:799 glade/etherape.glade:944
+#, fuzzy
+msgid ""
+"Expire protocol statistics for a node after this much time. 0 means never "
+"timeout."
+msgstr "Ta bort denna länk efter så här lång tid. 0 betyder aldrig."
+
+#: glade/etherape.glade:822
+#, fuzzy
+msgid "<i>Node Timeouts (s)</i>"
+msgstr "Nod-timeout (ms)"
+
+#: glade/etherape.glade:872
+#, fuzzy
+msgid ""
+"Remove this link from the diagram after this much time. 0 means never "
+"timeout."
+msgstr ""
+"Ta bort denna nod från diagrammet efter så här lång tid. 0 betyder aldrig."
+
+#: glade/etherape.glade:908
+#, fuzzy
+msgid ""
+"Delete this link from memory after this much time. 0 means never timeout."
+msgstr "Ta bort denna nod från minnet efter så här lång tid. 0 betyder aldrig."
+
+#: glade/etherape.glade:967
+#, fuzzy
+msgid "<i>Link Timeouts (s)</i>"
+msgstr "Länk-timeout (ms)"
+
+#: glade/etherape.glade:1004
+#, fuzzy
+msgid "Remove this protocol from memory after this much time. "
+msgstr "Ta bort denna nod från minnet efter så här lång tid. 0 betyder aldrig."
+
+#: glade/etherape.glade:1047
+msgid "<i>Global Protocol Timeouts (s)</i>"
+msgstr ""
+
+#: glade/etherape.glade:1068
+msgid "Timings"
+msgstr ""
+
+#: glade/etherape.glade:1090
+msgid "Save"
+msgstr "Spara"
+
+#: glade/etherape.glade:1095
+msgid "Saves changes to preferences file"
+msgstr ""
+
+#: glade/etherape.glade:1112
+msgid "Confirm changes"
+msgstr ""
+
+#: glade/etherape.glade:1129
+msgid "Cancel changes"
+msgstr ""
+
+#: glade/etherape.glade:1150
+msgid "EtherApe: Protocols"
+msgstr "EtherApe: Protokoll"
+
+#: glade/etherape.glade:1186
+msgid "name"
+msgstr "namn"
+
+#: glade/etherape.glade:1208
+msgid "Last Heard: "
+msgstr "Senast hörd: "
+
+#: glade/etherape.glade:1220
+msgid "label73"
+msgstr "label73"
+
+#: glade/etherape.glade:1253 glade/etherape.glade:1699
+msgid "Instantaneous"
+msgstr "Momentan"
+
+#: glade/etherape.glade:1266 glade/etherape.glade:1302
+msgid "test label"
+msgstr "testetikett"
+
+#: glade/etherape.glade:1289 glade/etherape.glade:1711
+msgid "Accumulated"
+msgstr "Ackumulerad"
+
+#: glade/etherape.glade:1332
+msgid "Select color"
+msgstr "Välj färg"
+
+#: glade/etherape.glade:1368
+msgid "EtherApe: assign protocol"
+msgstr "EtherApe: tilldela protokoll"
+
+#: glade/etherape.glade:1385
+msgid "Type protocol name..."
+msgstr "Ange protokollnamn..."
+
+#: glade/etherape.glade:1398
+#, fuzzy
+msgid "Type the protocol name"
+msgstr "Ange protokollnamn..."
+
+#: glade/etherape.glade:1399
+msgid "WWW"
+msgstr ""
+
+#: glade/etherape.glade:1566
+msgid "Numeric Name:"
+msgstr "Numeriskt namn:"
+
+#: glade/etherape.glade:1579
+msgid "Resolved Name:"
+msgstr ""
+
+#: glade/etherape.glade:1591
+#, fuzzy
+msgid "node A"
+msgstr "Läge"
+
+#: glade/etherape.glade:1601
+#, fuzzy
+msgid "node B"
+msgstr "Läge"
+
+#: glade/etherape.glade:1664
+msgid "Total"
+msgstr ""
+
+#: glade/etherape.glade:1675
+#, fuzzy
+msgid "Inbound"
+msgstr "Mom. ingående"
+
+#: glade/etherape.glade:1687
+#, fuzzy
+msgid "Outbound"
+msgstr "Acku. utgående"
+
+#: glade/etherape.glade:1775
+#, fuzzy
+msgid "Average size"
+msgstr "medel"
+
+#: glade/etherape.glade:1862
+#, fuzzy
+msgid "Copyright 2001-2011 Juan Toledo, Riccardo Ghetta"
+msgstr "Copyright 2001 Juan Toledo"
+
+#: glade/etherape.glade:1863
+#, fuzzy
+msgid "A Graphical Network Browser."
+msgstr ""
+"En grafisk nätverksbläddrare.\n"
+"Webb: http://etherape.sourceforge.net"
+
+#: glade/etherape.glade:1881
+msgid ""
+"Vincent van Adrighem <vincent@dirck.mine.nu>\n"
+"Gôrkem Cetin <gorkem@gelecek.com.tr>\n"
+"Chris Leick <c.leick@vollbio.de>\n"
+"Frederic Peters <fpeters@debian.org>\n"
+"Daniel Nylander\n"
+msgstr ""
+
+#: glade/etherape.glade:1915
+msgid "EtherApe"
+msgstr "EtherApe"
+
+#: glade/etherape.glade:1933
+#, fuzzy
+msgid "_File"
+msgstr "Fil:"
+
+#: glade/etherape.glade:1949
+msgid "Export node data as xml"
+msgstr ""
+
+#: glade/etherape.glade:1950
+msgid "_export"
+msgstr ""
+
+#: glade/etherape.glade:1985
+msgid "_Capture"
+msgstr "Fånga in"
+
+#: glade/etherape.glade:1992
+msgid "_Mode"
+msgstr "Läge"
+
+#: glade/etherape.glade:2001
+msgid "Set Link Layer (OSI level 2) mode"
+msgstr ""
+
+#: glade/etherape.glade:2002
+msgid "_Link Layer"
+msgstr ""
+
+#: glade/etherape.glade:2018
+msgid "Set IP mode"
+msgstr "Sätt IP-läge"
+
+#: glade/etherape.glade:2019
+msgid "_IP"
+msgstr "_IP"
+
+#: glade/etherape.glade:2031
+msgid "Set TCP mode"
+msgstr "Sätt TCP-läge"
+
+#: glade/etherape.glade:2032
+msgid "_TCP"
+msgstr "_TCP"
+
+#: glade/etherape.glade:2047
+msgid "_Interfaces"
+msgstr "_Nätverksgränssnitt"
+
+#: glade/etherape.glade:2064 glade/etherape.glade:2241
+msgid "Start capture"
+msgstr "Starta infångst"
+
+#: glade/etherape.glade:2075
+msgid "advances to next packet"
+msgstr ""
+
+#: glade/etherape.glade:2087 glade/etherape.glade:2269
+msgid "Pause capture"
+msgstr "Pausa infångst"
+
+#: glade/etherape.glade:2105 glade/etherape.glade:2284
+msgid "Stop capture"
+msgstr "Stoppa infångst"
+
+#: glade/etherape.glade:2125
+msgid "_View"
+msgstr ""
+
+#: glade/etherape.glade:2133
+msgid "Show or hide the protocols window"
+msgstr "Visa eller göm protokollfönstret"
+
+#: glade/etherape.glade:2134
+msgid "_Protocols"
+msgstr "_Protokoll"
+
+#: glade/etherape.glade:2142
+#, fuzzy
+msgid "Show or hide the nodes window\t"
+msgstr "Visa eller göm protokollfönstret"
+
+#: glade/etherape.glade:2143
+#, fuzzy
+msgid "_Nodes"
+msgstr "Noder"
+
+#: glade/etherape.glade:2157
+msgid "Show or hide the toolbar"
+msgstr "Visa eller göm verktygslisten"
+
+#: glade/etherape.glade:2158
+msgid "_Toolbar"
+msgstr "Verk_tygslist"
+
+#: glade/etherape.glade:2168
+msgid "Show or hide the legend"
+msgstr "Visa eller göm förklarning"
+
+#: glade/etherape.glade:2169
+msgid "_Legend"
+msgstr "Förk_larning"
+
+#: glade/etherape.glade:2179
+msgid "Show or hide the status bar"
+msgstr "Visa eller göm statuslisten"
+
+#: glade/etherape.glade:2180
+msgid "_Status Bar"
+msgstr "_Statuslist"
+
+#: glade/etherape.glade:2193
+msgid "_Help"
+msgstr ""
+
+#: glade/etherape.glade:2242
+msgid "Start"
+msgstr "Start"
+
+#: glade/etherape.glade:2255
+msgid "Next"
+msgstr ""
+
+#: glade/etherape.glade:2270
+msgid "Pause"
+msgstr "Paus"
+
+#: glade/etherape.glade:2285
+msgid "Stop"
+msgstr "Stopp"
+
+#: glade/etherape.glade:2307
+msgid "Preferences (Ctrl-P)"
+msgstr "Egenskaper (Ctrl-P)"
+
+#: glade/etherape.glade:2308
+msgid "Pref."
+msgstr "Egensk."
+
+#: glade/etherape.glade:2323
+msgid "Display the protocols window"
+msgstr "Visa protokollfönstret"
+
+#: glade/etherape.glade:2324
+msgid "Prot."
+msgstr "Proto"
+
+#: glade/etherape.glade:2337 glade/etherape.glade:2460
+msgid "Nodes"
+msgstr "Noder"
+
+#: glade/etherape.glade:2402
+msgid "Protocols"
+msgstr "Protokoll"
+
+#: glade/etherape.glade:2473
+msgid "_Show all nodes"
+msgstr ""
+
+#: glade/etherape.glade:2478
+msgid "Controls display of nodes timed out from diagram, but still in memory"
+msgstr ""
+
+#, fuzzy
+#~ msgid "We could not load glade interface file! (%s)"
+#~ msgstr "Vi kunde inte läsa in gränssnittet! (%s)"
+
+#, fuzzy
+#~ msgid "Link type %d not supported"
+#~ msgstr "Länktyp saknar stöd för närvarande"
+
+#~ msgid "Mode not available in this device"
+#~ msgstr "Läge inte tillgängligt för denna enhet"
+
+#~ msgid ""
+#~ "Stack Level is not set to Topmost Recognized Protocol. Please check in "
+#~ "the preferences dialog that this is what you really want"
+#~ msgstr ""
+#~ "Stacknivån är inte inställd till Mest kända protkoll. Vänligen "
+#~ "kontrollera i inställningarna att detta verkligen är vad du vill"
+
+#~ msgid "Cycle assigned colors"
+#~ msgstr "Växla tilldelade färger"
+
+#~ msgid "Whether or not to use assigned colors for unassigned protocols"
+#~ msgstr ""
+#~ "Om tilldelade färger för icke-tilldelade protokoll ska användas eller inte"
+
+#~ msgid "<ethernet|fddi|ip|tcp>"
+#~ msgstr "<ethernet|fddi|ip|tcp>"
+
+#~ msgid "set input file"
+#~ msgstr "sätt inmatningsfil"
+
+#~ msgid "<file name>"
+#~ msgstr "<filnamn>"
+
+#~ msgid "do not fade old links"
+#~ msgstr "tona inte ut gamla länkar"
+
+#~ msgid "Don't show warnings"
+#~ msgstr "Visa inte varningar"
+
+#~ msgid "set the node color"
+#~ msgstr "sätt nodfärgen"
+
+#~ msgid "color"
+#~ msgstr "färg"
+
+#~ msgid "set the text color"
+#~ msgstr "sätt textfärgen"
+
+#~ msgid "Error getting device: %s"
+#~ msgstr "Fel vid hämtning av enhet: %s"
+
+#~ msgid "Link type is Ethernet"
+#~ msgstr "Länktyp är Ethernet"
+
+#~ msgid "Link type is FDDI"
+#~ msgstr "Länktyp är FDDI"
+
+#~ msgid "Link type is Token Ring"
+#~ msgstr "Länktyp är Token Ring"
+
+#~ msgid "Link type is NULL"
+#~ msgstr "Länktyp är NULL"
+
+#~ msgid "Link type is Linux cooked sockets"
+#~ msgstr "Länktyp är Linux cooked sockets"
+
+#~ msgid "Ape mode not yet supported"
+#~ msgstr "Ape-läge stöds inte just nu"
+
+#~ msgid "Can't use filter:  Couldn't obtain netmask info (%s)."
+#~ msgstr ""
+#~ "Kan inte använda filtret:  Kunde inte hämta information om nätmasken (%s)."
+
+#~ msgid "Status not PAUSE or STOP at start_capture"
+#~ msgstr "Status är inte PAUSE eller STOP vid start_capture"
+
+#~ msgid "Status not PLAY at pause_capture"
+#~ msgstr "Status är inte PLAY vid pause_capture"
+
+#~ msgid "Status not PLAY or PAUSE at stop_capture"
+#~ msgstr "Status är inte PLAY eller PAUSE vid stop_capture"
+
+#~ msgid "Error while removing capture source in stop_capture"
+#~ msgstr "Fel vid borttagning av fångstkälla i stop_capture"
+
+#~ msgid "Reached default in get_node_id"
+#~ msgstr "Nådde förvalt värde i get_node_id"
+
+#~ msgid "Removing node: %s. Number of nodes %d"
+#~ msgstr "Tar bort nod: %s. Antal noder %d"
+
+#~ msgid "Removing link. Number of links %d"
+#~ msgstr "Ta bort länk. Antal länkar %d"
+
+#~ msgid "Null packet in check_packet"
+#~ msgstr "Noll paket i check_packet"
+
+#~ msgid "Status not STOP or PAUSE at gui_start_capture"
+#~ msgstr "Status är inte STOP eller PAUSE vid gui_start_capture"
+
+#~ msgid " in Token Ring mode"
+#~ msgstr " i Token Ring-läge"
+
+#~ msgid " in FDDI mode"
+#~ msgstr " i FDDI-läge"
+
+#~ msgid " in Ethernet mode"
+#~ msgstr " i Ethernet-läge"
+
+#~ msgid "Status not PLAY or PAUSE at gui_stop_capture"
+#~ msgstr "Status är inte PLAY eller PAUSE vid gui_stop_capture"
+
+#~ msgid "Number of nodes: "
+#~ msgstr "Antal noder: "
+
+#~ msgid ". Refresh Period: %d"
+#~ msgstr ". Uppdateringsperiod: %d"
+
+#~ msgid ". IDLE."
+#~ msgstr ". VÄNTAR."
+
+#~ msgid ". TIMEOUT."
+#~ msgstr ". TIMEOUT."
+
+#~ msgid "Unable to parse color string %s for new protocol %s"
+#~ msgstr "Kunde inte tolka färgsträng %s för nytt protokoll %s"
+
+#~ msgid "Main node protocol not found in update_canvas_nodes"
+#~ msgstr "Huvudnodprotokoll hittades inte i update_canvas_nodes"
+
+#~ msgid "Creating canvas_link: %s-%s. Number of links %d"
+#~ msgstr "Skapar canvas_link: %s-%s. Antal länkar %d"
+
+#~ msgid "Main link protocol not found in update_canvas_links"
+#~ msgstr "Huvudlänkprotokoll hittades inte i update_canvas_links"
+
+#~ msgid "Set Token Ring mode"
+#~ msgstr "Sätt Token Ring-läge"
+
+#~ msgid "Token _Ring"
+#~ msgstr "Token _Ring"
+
+#~ msgid "Set FDDI mode"
+#~ msgstr "Sätt FDDI-läge"
+
+#~ msgid "_FDDI"
+#~ msgstr "_FDDI"
+
+#~ msgid "Set Ethernet mode"
+#~ msgstr "Sätt Ethernet-läge"
+
+#~ msgid "_Ethernet"
+#~ msgstr "_Ethernet"
+
+#~ msgid "Set UDP mode"
+#~ msgstr "Sätt UDP-läge"
+
+#~ msgid "_UDP"
+#~ msgstr "_UDP"
+
+#~ msgid "_Start"
+#~ msgstr "_Start"
+
+#~ msgid "_Pause"
+#~ msgstr "_Paus"
+
+#~ msgid "St_op"
+#~ msgstr "St_opp"
+
+#~ msgid "window1"
+#~ msgstr "window1"
+
+#~ msgid "accumulated"
+#~ msgstr "ackumulerad"
+
+#~ msgid "This message is not here yet. (Dont tell anybody you saw it ;-) )"
+#~ msgstr ""
+#~ "Detta meddelande är inte här ännu. (Säg inget till dom andra att du såg "
+#~ "det ;-))"
+
+#~ msgid "Font"
+#~ msgstr "Typsnitt"
+
+#~ msgid "Topmost recognized protocol"
+#~ msgstr "Mest kända protkoll"
+
+#~ msgid "Level 2 (Eg: ETH_II)"
+#~ msgstr "Lager 2 (ETH_II)"
+
+#~ msgid "Level 3 (Eg: IP)"
+#~ msgstr "Lager 3 (IP)"
+
+#~ msgid "Level 4 (Eg: TCP)"
+#~ msgstr "Lager 4 (TCP)"
+
+#~ msgid "Level 5 (Eg: HTTP)"
+#~ msgstr "Lager 5 (HTTP)"
+
+#~ msgid "Instant. traffic (In+Out)"
+#~ msgstr "Nuvar. trafik (In+Ut)"
+
+#~ msgid "Instant. traffic (Inbound)"
+#~ msgstr "Nuvar. trafik (Ingående)"
+
+#~ msgid "Instant. traffic (Outbound)"
+#~ msgstr "Nuvar. trafik (Utgående)"
+
+#~ msgid "Accum. traffic (In+Out)"
+#~ msgstr "Ackum. trafik (In+Ut)"
+
+#~ msgid "Accum. traffic (Inbound)"
+#~ msgstr "Ackum. trafik (Ingående)"
+
+#~ msgid "Accum. traffic (Outbound)"
+#~ msgstr "Ackum. trafik (Utgående)"
+
+#~ msgid "Diagram Node Timeout (ms)"
+#~ msgstr "Timeout för noddiagram (ms)"
+
+#~ msgid "Max. Link Width"
+#~ msgstr "Max bredd för länkar"
+
+#~ msgid "Max. Node Radius"
+#~ msgstr "Max radius för noder"
+
+#~ msgid "Linear"
+#~ msgstr "Linjär"
+
+#~ msgid "Logarithmic"
+#~ msgstr "Logaritmisk"
+
+#~ msgid "Square Root"
+#~ msgstr "Kvadratrot"
+
+#~ msgid "Color"
+#~ msgstr "Färg"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokoll"
+
+#~ msgid "Fade link colors to black when there is no traffic"
+#~ msgstr "Tona länkfärger till svart när det inte är någon trafik"
+
+#~ msgid "Token Ring"
+#~ msgstr "Token Ring"
+
+#~ msgid "FDDI"
+#~ msgstr "FDDI"
+
+#~ msgid "Ethernet"
+#~ msgstr "Ethernet"
+
+#~ msgid "IP"
+#~ msgstr "IP"
+
+#~ msgid "TCP"
+#~ msgstr "TCP"
+
+#~ msgid "Solved"
+#~ msgstr "Löst"
+
+#~ msgid "Add a new protocol to the list of protocols to choose a name from"
+#~ msgstr ""
+#~ "Lägg till ett nytt protokoll till listan av protkoll att välja ett namn "
+#~ "från"
+
+#~ msgid "Add protocol"
+#~ msgstr "Lägg till protokoll"
+
+#~ msgid "Remove protocol"
+#~ msgstr "Ta bort protokoll"
+
+#~ msgid ""
+#~ "Toggle whether the selected protocol name has to be solved in order to "
+#~ "use it"
+#~ msgstr ""
+#~ "Växla om det valda protokollnamnet måste slås upp för att kunna användas"
+
+#~ msgid "Toggle solved"
+#~ msgstr "Växla fixad"
+
+#~ msgid "Move selected protocol up one item"
+#~ msgstr "Flytta markerat protokoll upp ett steg"
+
+#~ msgid "Move up"
+#~ msgstr "Flytta upp"
+
+#~ msgid "Move selected protocol down one item"
+#~ msgstr "Flytta markerat protokoll ned ett steg"
+
+#~ msgid "Move down"
+#~ msgstr "Flytta ned"
+
+#~ msgid "Don't try to resolve any name. Always present in numeric form."
+#~ msgstr ""
+#~ "Försök inte att slå upp något namn. Presentera alltid i numerisk form."
+
+#~ msgid "Force numeric"
+#~ msgstr "Tvinga numerisk"
+
+#~ msgid "Make DNS queries to resolve IP addresses"
+#~ msgstr "Gör DNS-förfrågningar för att slå upp IP-adresser"
+
+#~ msgid "Names"
+#~ msgstr "Namn"
+
+#~ msgid "Capture"
+#~ msgstr "Fånga"
+
+#~ msgid "Select Font"
+#~ msgstr "Välj typsnitt"
+
+#~ msgid "EtherApe: Open Capture File"
+#~ msgstr "EtherApe: Öppna fångstfil"
+
+#~ msgid "EtherApe: Select capture file"
+#~ msgstr "EtherApe: Välj fångstfil"
+
+#~ msgid "EtherApe: Select Capture File"
+#~ msgstr "EtherApe: Välj fångstfil"
+
+#~ msgid "Select capture file"
+#~ msgstr "Välj fångstfil"
+
+#~ msgid "Optionally, set a capture filter"
+#~ msgstr "Valfritt, sätt ett fångstfilter"
+
+#~ msgid "Filter:"
+#~ msgstr "Filter:"
+
+#~ msgid "Name:"
+#~ msgstr "Namn:"
+
+#~ msgid "This is a test node name"
+#~ msgstr "Detta är ett testnodnamn"
+
+#~ msgid "Show traffic"
+#~ msgstr "Visa trafik"
+
+#~ msgid "Show protocols"
+#~ msgstr "Visa protokoll"
+
+#~ msgid "Accu. Inbound"
+#~ msgstr "Acku. ingående"
+
+#~ msgid "Inst. Outbound"
+#~ msgstr "Mom. utgående"
+
+#~ msgid "Columns"
+#~ msgstr "Kolumner"
+
+#~ msgid "Inst Traffic"
+#~ msgstr "Mom. trafik"
+
+#~ msgid "Accum Traffic"
+#~ msgstr "Ackum trafik"
+
+#~ msgid "Last Heard"
+#~ msgstr "Senast hörd"
+
+#~ msgid "Packets"
+#~ msgstr "Paket"
+
+#~ msgid "ok_button2"
+#~ msgstr "ok_button2"
+
+#~ msgid "cancel_button2"
+#~ msgstr "cancel_button2"
+
+#~ msgid "help_button1"
+#~ msgstr "help_button1"
+
+#~ msgid ""
+#~ "Type the name of the protocol that will be assigned to the selected color"
+#~ msgstr "Ange namnet på protokollen som ska tilldelas den markerade färgen"
+
+#~ msgid "No node_id in on_node_info_delete_event"
+#~ msgstr "Inget node_id i on_node_info_delete_event"
+
+#~ msgid "No node_info_window in on_node_info_delete_event"
+#~ msgstr "Inget node_info_window i on_node_info_delete_event"
+
+#~ msgid "No info available"
+#~ msgstr "Ingen information tillgänglig"

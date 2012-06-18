@@ -1,0 +1,26 @@
+#[encoding: UTF-8]
+src/main.c
+src/callbacks.c
+src/capture.c
+src/menus.c
+src/diagram.c
+src/protocols.c
+src/conversations.c
+src/info_windows.c
+src/datastructs.c
+src/decode_proto.c
+src/dns.c
+src/ip-cache.c
+src/links.c
+src/names.c
+src/names_netbios.c
+src/node.c
+src/preferences.c
+src/resolv.c
+src/thread_resolve.c
+src/basic_stats.c
+src/traffic_stats.c
+src/datastructs.c
+src/util.c
+src/ui_utils.c
+glade/etherape.glade
