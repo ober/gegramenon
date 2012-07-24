@@ -463,6 +463,7 @@ sip		5060/udp
 aim		5190/tcp # aim IM receive
 napster-data	5555/tcp # p2p napster transfer
 gnutella	6346/tcp
+redis           6379/tcp
 napster-data	6688/tcp # p2p napster transfer
 napster-data	6699/tcp # p2p napster transfer
 napster-data	6700/tcp # p2p napster transfer
