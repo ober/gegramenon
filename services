@@ -478,5 +478,5 @@ wtls_wsp	9002/udp
 wtls_wtp_wsp	9003/udp
 bxpp		10288/tcp
 memcache        11211/tcp
-
+resque          27017/tcp
 # Local services
