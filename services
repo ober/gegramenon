@@ -462,20 +462,20 @@ sip		5060/tcp
 sip		5060/udp
 aim		5190/tcp # aim IM receive
 napster-data	5555/tcp # p2p napster transfer
-gnutella	6346/tcp 
+gnutella	6346/tcp
 napster-data	6688/tcp # p2p napster transfer
 napster-data	6699/tcp # p2p napster transfer
 napster-data	6700/tcp # p2p napster transfer
 rx-afs-backups	7021/udp
 real		7070/tcp # real audio-video
 napster		7777/tcp # tipical napster server port
-irdmi		8000/tcp 
+irdmi		8000/tcp
 napster		8888/tcp # tipical napster server port
 wsp		9000/udp
 wtp_wsp		9001/udp
 wtls_wsp	9002/udp
 wtls_wtp_wsp	9003/udp
 bxpp		10288/tcp
+memcache        11211/tcp
 
 # Local services
-
