@@ -1,0 +1,11 @@
+make clean
+export CSHIT=`guile-config compile`
+export LIBS=`guile-config link`
+export LDFLAGS="-Wl,-no-as-needed $(pkg-config --libs gobject-introspection-1.0) ${LIBS}"
+export CFLAGS="$(pkg-config --cflags gobject-introspection-1.0) ${CSHIT}"
+./autogen.sh
+automake
+autoconf
+./configure --prefix=${HOME}/gegramenon #--with-x-toolkit=gtk3
+make
+make install

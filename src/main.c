@@ -38,6 +38,7 @@
 #include "capture.h"
 #include "datastructs.h"
 
+
 /***************************************************************************
  *
  * local variables
@@ -45,6 +46,8 @@
  **************************************************************************/
 static gboolean quiet = FALSE;
 static void (*old_sighup_handler) (int);
+
+static void* register_functions (void* data);
 
 /***************************************************************************
  *
@@ -54,11 +57,11 @@ static void (*old_sighup_handler) (int);
 static void free_static_data(void);
 static void set_debug_level (void);
 static void session_die (GnomeClient * client, gpointer client_data);
-static gint save_session (GnomeClient * client, gint phase, 
-                          GnomeSaveStyle save_style, gint is_shutdown, 
-                          GnomeInteractStyle interact_style, gint is_fast, 
+static gint save_session (GnomeClient * client, gint phase,
+                          GnomeSaveStyle save_style, gint is_shutdown,
+                          GnomeInteractStyle interact_style, gint is_fast,
                           gpointer client_data);
-static void log_handler (gchar * log_domain, GLogLevelFlags mask, 
+static void log_handler (gchar * log_domain, GLogLevelFlags mask,
                          const gchar * message, gpointer user_data);
 
 /* signal handling */
@@ -88,6 +91,7 @@ main (int argc, char *argv[])
   gchar *cl_glade_file = NULL;
   poptContext poptcon;
 
+
   struct poptOption optionsTable[] = {
     {"diagram-only", 'd', POPT_ARG_NONE, &(pref.diagram_only), 0,
      N_("don't display any node text identification"), NULL},
@@ -101,8 +105,8 @@ main (int argc, char *argv[])
      N_("export to named file at end of replay"), N_("<file to export to>")},
     {"signal-export", 0, POPT_ARG_STRING, &export_file_signal, 0,
      N_("export to named file on receiving USR1"), N_("<file to export to>")},
-    {"stationary", 's', POPT_ARG_NONE, &(pref.stationary), 0,  
-     N_("don't move nodes around (deprecated)"), NULL}, 
+    {"stationary", 's', POPT_ARG_NONE, &(pref.stationary), 0,
+     N_("don't move nodes around (deprecated)"), NULL},
     {"node-limit", 'l', POPT_ARG_INT, &(appdata.node_limit), 0,
      N_("limits nodes displayed"), N_("<number of nodes>")},
     {"mode", 'm', POPT_ARG_STRING, &mode_string, 0,
@@ -135,20 +139,20 @@ main (int argc, char *argv[])
 
 #ifdef PACKAGE_SCM_REV
   /* We initiate the application and read command line options */
-  version = g_strdup_printf("%s (hg id %s)", VERSION, 
-                            (*PACKAGE_SCM_REV) ? PACKAGE_SCM_REV : 
+  version = g_strdup_printf("%s (hg id %s)", VERSION,
+                            (*PACKAGE_SCM_REV) ? PACKAGE_SCM_REV :
                               _("-unknown-"));
 #else
   version = g_strdup(VERSION);
 #endif
-  gnome_program_init ("EtherApe", version, 
+  gnome_program_init ("EtherApe", version,
                       LIBGNOMEUI_MODULE, argc, argv,
 		      GNOME_PARAM_POPT_TABLE, optionsTable, GNOME_PARAM_NONE);
   g_free(version);
 
   appdata_init(&appdata);
 
-  /* We obtain application parameters 
+  /* We obtain application parameters
    * First, absolute defaults
    * Second, values saved in the config file
    * Third, whatever given in the command line */
@@ -225,7 +229,7 @@ main (int argc, char *argv[])
     }
   else
       g_message("Invalid minimum delay %ld, ignored", midelay);
-  
+
   if (madelay >= 0 && madelay <= G_MAXLONG)
     {
       if (madelay < appdata.min_delay)
@@ -240,7 +244,7 @@ main (int argc, char *argv[])
     }
   else
       g_message("Invalid maximum delay %ld, ignored", madelay);
-  
+
   /* Glade */
   glade_gnome_init ();
   glade_require("gnome");
@@ -250,7 +254,7 @@ main (int argc, char *argv[])
 
   /* prepare decoders */
   services_init();
-  
+
   /* Sets controls to the values of variables and connects signals */
   init_diagram (appdata.xml);
 
@@ -264,7 +268,7 @@ main (int argc, char *argv[])
 
   install_handlers();
 
-  /* With this we force an update of the diagram every x ms 
+  /* With this we force an update of the diagram every x ms
    * Data in the diagram is updated, and then the canvas redraws itself when
    * the gtk loop is idle. If the CPU can't handle the set refresh_period,
    * then it will just do a best effort */
@@ -279,17 +283,23 @@ main (int argc, char *argv[])
   g_timeout_add (10000, (GtkFunction) ipcache_tick, NULL);
 
   init_menus ();
-  
+
   gui_start_capture ();
 
+  int pid = fork();
+  if (!pid) {
+    scm_with_guile (&register_functions, NULL);
+    scm_shell (argc, argv);
+  }
   /* MAIN LOOP */
+
   gtk_main ();
 
   free_static_data();
   return 0;
 }				/* main */
 
-/* releases all static and cached data. Called just before exiting. Obviously 
+/* releases all static and cached data. Called just before exiting. Obviously
  * it's not stricly needed, since the memory will be returned to the OS anyway,
  * but makes finding memory leaks much easier. */
 static void free_static_data(void)
@@ -380,7 +390,7 @@ save_session (GnomeClient * client, gint phase, GnomeSaveStyle save_style,
 /* installs signal handlers */
 static void install_handlers(void)
 {
-  /* 
+  /*
    * Signal handling
    * Catch SIGINT and SIGTERM and, if we get either of them, clean up
    * and exit.
@@ -415,4 +425,11 @@ void cleanup(int signum)
 static void signal_export(int signum)
 {
   appdata.request_dump = TRUE;
+}
+
+
+static void*
+register_functions (void* data)
+{
+  return NULL;
 }
