@@ -6,6 +6,6 @@ export CFLAGS="$(pkg-config --cflags gobject-introspection-1.0) ${CSHIT}"
 ./autogen.sh
 automake
 autoconf
-./configure --prefix=${HOME}/gegramenon #--with-x-toolkit=gtk3
+./configure --prefix=${HOME}/geggy
 make
 make install
